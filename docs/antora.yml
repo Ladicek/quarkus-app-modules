@@ -1,0 +1,5 @@
+name: quarkus-app-modules
+title: App Modules
+version: dev
+nav:
+  - modules/ROOT/nav.adoc
