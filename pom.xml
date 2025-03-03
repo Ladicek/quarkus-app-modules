@@ -5,7 +5,7 @@
     <parent>
         <groupId>io.quarkiverse</groupId>
         <artifactId>quarkiverse-parent</artifactId>
-        <version>18</version>
+        <version>20</version>
     </parent>
     <groupId>io.quarkiverse.app-modules</groupId>
     <artifactId>quarkus-app-modules-parent</artifactId>
@@ -25,11 +25,11 @@
     </scm>
 
     <properties>
-        <compiler-plugin.version>3.13.0</compiler-plugin.version>
+        <compiler-plugin.version>3.14.1</compiler-plugin.version>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.19.1</quarkus.version>
+        <quarkus.version>3.27.0</quarkus.version>
     </properties>
 
     <dependencyManagement>
@@ -67,31 +67,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <profiles>
-        <profile>
-            <id>docs</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>!true</value>
-                </property>
-            </activation>
-            <modules>
-                <module>docs</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>it</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>!true</value>
-                </property>
-            </activation>
-            <modules>
-                <module>integration-tests</module>
-            </modules>
-        </profile>
-    </profiles>
 </project>
